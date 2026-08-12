@@ -1,0 +1,10 @@
+{
+  "rows_scored": 30000,
+  "pages_prioritized": 17,
+  "thresholds": {
+    "days_since_last_update": 180,
+    "impressions_90d": 500
+  },
+  "score_formula": "log1p(impressions_90d) * (1 + days_since_last_update / 365), for eligible pages only",
+  "audit_proxy_excluded_from_score": true
+}
