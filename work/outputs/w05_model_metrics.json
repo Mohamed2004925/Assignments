@@ -1,0 +1,53 @@
+{
+  "seed": 42,
+  "train_rows": 22885,
+  "test_rows": 7115,
+  "train_clients": 24,
+  "test_clients": 8,
+  "features": [
+    "search_volume",
+    "competition",
+    "cpc",
+    "word_count",
+    "impressions_90d",
+    "clicks_90d",
+    "sessions_90d",
+    "days_with_impressions",
+    "days_with_sessions",
+    "content_age_days",
+    "days_since_last_update",
+    "ctr",
+    "avg_position",
+    "engagement_rate",
+    "scroll_rate",
+    "ai_traffic_pct"
+  ],
+  "excluded_leakage_fields": [
+    "trend_direction",
+    "trend_pct",
+    "impressions_last_30d",
+    "impressions_prev_30d",
+    "clicks_last_30d",
+    "clicks_prev_30d",
+    "sessions_last_30d",
+    "sessions_prev_30d"
+  ],
+  "comparison": [
+    {
+      "method": "Week-4 rule baseline",
+      "precision_at_10": "0.800",
+      "precision_at_20": "0.700",
+      "average_precision": "",
+      "roc_auc": "",
+      "test_base_rate": "0.517"
+    },
+    {
+      "method": "Logistic Regression",
+      "precision_at_10": "0.900",
+      "precision_at_20": "0.850",
+      "average_precision": "0.600",
+      "roc_auc": "0.589",
+      "test_base_rate": "0.517"
+    }
+  ]
+}
