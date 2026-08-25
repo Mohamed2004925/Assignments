@@ -1,0 +1,12 @@
+{
+  "rows_scored": 30000,
+  "candidate_rows_with_500_plus_impressions": 16726,
+  "queue_rows": 50,
+  "pseudonymized_clients_represented": 18,
+  "per_client_cap": 3,
+  "estimated_first_pass_review_hours": 53.5,
+  "validation_context": "Week 6 client-grouped current-state proxy evaluation: ROC AUC 0.589, average precision 0.600, test base rate 0.517.",
+  "queue_export": "work\\outputs\\w07_ranked_action_queue.csv",
+  "figure_export": "work\\figures\\w07_queue_by_archetype.png",
+  "not_for_automation": true
+}
