@@ -7,11 +7,11 @@
 
 ## Abstract
 
-This project asks whether observed search, freshness, and engagement signals can prioritize content pages for human review. I evaluated a transparent rule baseline and logistic-regression model using 30,000 pseudonymized content items from the FlyRank ML Internship starter dataset. On a holdout of eight unseen pseudonymized clients, the model reached precision@20 of 0.850 versus 0.700 for the baseline, with average precision of 0.600 and ROC AUC of 0.589 against a 0.517 proxy-label base rate. The model is therefore a modestly better triage signal, not a reliable prediction of future performance or of the result of an edit. The output is a capped, reason-coded queue for a human reviewer to investigate before making any content decision.
+This FlyRank case study asks whether observed search, freshness, and engagement signals can help content and SEO reviewers allocate limited review time across a content inventory. I evaluated a transparent rule baseline and logistic-regression model using 30,000 pseudonymized content items from the FlyRank ML Internship starter dataset. On a holdout of eight unseen pseudonymized clients, the model reached precision@20 of 0.850 versus 0.700 for the baseline, with average precision of 0.600 and ROC AUC of 0.589 against a 0.517 proxy-label base rate. The model is therefore a modestly better triage signal, not a reliable prediction of future performance or of the result of an edit. The resulting capped, reason-coded queue helps a reviewer decide what to investigate first while retaining human judgment for every content action.
 
 ## 1. Introduction / problem statement
 
-The decision is which content items should enter a review queue first when editorial attention is limited. The unit of analysis is one pseudonymized content item, and the output is a ranked queue with reason codes and suggested human-review steps. A wrong call wastes reviewer time or leaves a worthwhile page unreviewed, so the system supports investigation rather than automatic publishing, deletion, redirects, or claims about search-engine behavior.
+In FlyRank's content-intelligence setting, a reviewer may need to assess a large, changing content inventory but cannot inspect every page at once. The case-study decision is therefore which pseudonymized content items should enter a human review queue first, using observed search and engagement signals. The unit of analysis is one content item, and the output is a ranked queue with reason codes and suggested human-review steps. A wrong call wastes reviewer time or leaves a worthwhile page unreviewed, so the system supports investigation rather than automatic publishing, deletion, redirects, or claims about search-engine behavior.
 
 ## 2. Data
 
